@@ -1,6 +1,7 @@
 services:
   web:
     build: .
+    image: melvin1717/visitor-counter:latest
     ports:
       - "5000:5000"
     depends_on:
