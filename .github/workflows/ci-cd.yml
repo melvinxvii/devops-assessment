@@ -44,3 +44,20 @@ jobs:
           context: .
           push: true
           tags: melvin1717/visitor-counter:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Pull latest Docker image
+        run: docker compose pull
+
+      - name: Deploy application
+        run: docker compose up -d --no-build
+
+      - name: Check running containers
+        run: docker compose ps
