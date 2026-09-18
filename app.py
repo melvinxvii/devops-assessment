@@ -22,7 +22,7 @@ def home():
         <title>Visitor Counter</title>
     </head>
     <body>
-        <h1>Welcome to My Visitor Counter</h1>
+        <h1>Welcome to My Visitor Counter version 2</h1>
         <p>Hello! 👋</p>
         <p>This page has been visited <strong>{count}</strong> times.</p>
         <p>Powered by Flask and Redis.</p>
